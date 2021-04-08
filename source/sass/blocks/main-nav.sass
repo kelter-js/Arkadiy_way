@@ -1,24 +1,45 @@
 .main-nav
+  position: relative
+  display: flex
+  width: 479px
+  height: 32px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    position: static
+    width: 100vw
+
+.main-nav__navigation
   padding-top: 6px;
+
+.main-nav__item
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 100vw
+    height: 43px
+    padding-left: 16px
+    padding-top: 17px
+
 
 .main-nav__item:first-child
   margin-right: 40px
-
-.main-nav__phone
-  margin-left: 89px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    margin-bottom: 30px
 
 .main-nav__link
   @include fstyle(14px, 17px, $dark-color, 500)
   text-decoration: none
 
 .main-nav__phone
+  margin-left: 89px
   @include fstyle(18px, 32px, $dark-color)
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    display: none
 
 .main-nav__list
   display: flex
   margin: 0px
   padding: 0px
   list-style: none
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    display: block
 
 .main-nav__phone
   letter-spacing: 1px
@@ -27,3 +48,71 @@
   position: absolute
   top: 2px
   left: 225px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    display: none
+
+.main-nav__toggle
+  position: absolute
+  top: 0
+  right: 0
+  display: block
+  width: 72px
+  height: 50px
+  cursor: pointer
+  border: none
+  background-color: transparent
+
+.main-nav--closed .main-nav__toggle:before
+  content: ""
+  position: absolute
+  top: 15px
+  left: 17px
+  width: 36px
+  height: 2px
+  background-color: $menu-buttons-color
+  box-shadow: 0 8px 0 0 $menu-buttons-color, 0 16px 0 0 $menu-buttons-color
+
+
+.main-nav--closed .main-nav__toggle:active:before
+  background-color: fade($menu-buttons-color, 30%)
+  box-shadow: 0 8px 0 0 fade($menu-buttons-color, 30%), 0 16px 0 0 fade($menu-buttons-color, 30%)
+
+.main-nav--opened .main-nav__toggle
+  top: 0
+  right: 0
+
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    top: 24px
+    left: 15px
+    width: 40px
+    height: 1px
+    background-color: $close-button-color
+
+  &::before
+    transform: rotate(45deg)
+    box-shadow: none
+
+  &::after
+    transform: rotate(-45deg)
+
+
+  &:active::before,
+  &:active::after
+    background-color: fade($close-button-color, 30%)
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width-only)
+  .main-nav--closed .main-nav__list
+    display: none
+
+  .main-nav--nojs .main-nav__toggle
+    display: none
+
+  .main-nav--nojs .main-nav__list
+    display: flex
+
+
+
+
