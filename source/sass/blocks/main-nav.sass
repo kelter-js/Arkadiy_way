@@ -1,19 +1,29 @@
-.main-nav__wrapper
-  display: flex;
-  width: 479px;
+.main-nav
+  padding-top: 6px;
 
-.main-nav__item
-  margin-right: 40px;
+.main-nav__item:first-child
+  margin-right: 40px
 
 .main-nav__phone
-  margin-left: 49px;
+  margin-left: 89px
+
+.main-nav__link
+  @include fstyle(14px, 17px, $dark-color, 500)
+  text-decoration: none
+
+.main-nav__phone
+  @include fstyle(18px, 32px, $dark-color)
 
 .main-nav__list
-  display: flex;
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
+  display: flex
+  margin: 0px
+  padding: 0px
+  list-style: none
 
 .main-nav__phone
-  vertical-align: bottom;
+  letter-spacing: 1px
 
+.main-header__phone-icon
+  position: absolute
+  top: 2px
+  left: 225px
