@@ -1,16 +1,19 @@
 .page-header__wrapper
   display: flex
   justify-content: space-between
-  min-height: 63px
   padding-top: 36px
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
-    width: 100vw
-    margin: 0px
+  padding-bottom: 31px
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     padding: 0px
     padding-top: 50px
+    min-height: 516px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 768px
+  @media (max-width: $mobile-width-only)
+    width: 320px
 
 .page-header__logo
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     position: absolute
     top: 18.5px
     left: 21px

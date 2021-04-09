@@ -1,36 +1,70 @@
 .main-nav
   position: relative
   display: flex
-  width: 479px
-  height: 32px
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     position: static
-    width: 100vw
+
 
 .main-nav__navigation
-  padding-top: 6px;
+  padding-top: 6px
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
+    padding-top: 0px
 
 .main-nav__item
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
-    width: 100vw
+  &:first-child
+      margin-right: 40px
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
+    position: relative
+    width: 752px
     height: 43px
     padding-left: 16px
     padding-top: 17px
+    cursor: pointer
+    &:first-child
+      margin-right: 0px
+      margin-bottom: 30px
+    @media (max-width: $mobile-width-only)
+      width: 304px
+    &:hover
+      outline: 1px solid $dark-grey-color
+      outline-offset: -2px
+    &:before
+      content: ""
+      position: absolute
+      top: 23px
+      right: 24.6px
+      width: 10px
+      height: 10px
+      border-top: 3px solid $dark-grey-color
+      border-right: 3px solid $dark-grey-color
+      margin-right: 10px
+      transform: rotate(45deg);
+  @media (max-width: $mobile-width-only)
+    &:before
+      content: ""
+      position: absolute
+      top: 23px
+      right: 24.6px
+      width: 6px
+      height: 6px
+      border-top: 2px solid $dark-grey-color
+      border-right: 2px solid $dark-grey-color
+      margin-right: 6px
+      transform: rotate(45deg);
 
-
-.main-nav__item:first-child
-  margin-right: 40px
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
-    margin-bottom: 30px
 
 .main-nav__link
   @include fstyle(14px, 17px, $dark-color, 500)
   text-decoration: none
+  @media (max-width: $mobile-width-only)
+    @include fstyle(20px, 28px, $darker-black-color, 600)
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    @include fstyle(24px, 30px, $darker-black-color, 600)
 
 .main-nav__phone
   margin-left: 89px
   @include fstyle(18px, 32px, $dark-color)
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     display: none
 
 .main-nav__list
@@ -38,8 +72,18 @@
   margin: 0px
   padding: 0px
   list-style: none
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     display: block
+    margin-top: 84px
+    &:before
+      content: ""
+      position: absolute
+      top: 0px
+      left: 0px
+      display: block
+      width: 70px
+      height: 50px
+      background-color: white
 
 .main-nav__phone
   letter-spacing: 1px
@@ -48,7 +92,7 @@
   position: absolute
   top: 2px
   left: 225px
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     display: none
 
 .main-nav__toggle
@@ -60,26 +104,35 @@
   height: 50px
   cursor: pointer
   border: none
-  background-color: transparent
+  @media (min-width: $desktop-width)
+    display: none
+  @media (max-width: $mobile-width-only)
+    width: 50px
 
 .main-nav--closed .main-nav__toggle:before
   content: ""
   position: absolute
   top: 15px
-  left: 17px
-  width: 36px
+  left: 24px
+  width: 22px
   height: 2px
   background-color: $menu-buttons-color
   box-shadow: 0 8px 0 0 $menu-buttons-color, 0 16px 0 0 $menu-buttons-color
+  @media (max-width: $mobile-width-only)
+    left: 14px
 
 
 .main-nav--closed .main-nav__toggle:active:before
   background-color: fade($menu-buttons-color, 30%)
   box-shadow: 0 8px 0 0 fade($menu-buttons-color, 30%), 0 16px 0 0 fade($menu-buttons-color, 30%)
 
+.main-nav--closed .main-nav__toggle
+  background-color: $red
+
 .main-nav--opened .main-nav__toggle
   top: 0
   right: 0
+  background-color: transparent
 
   &::before,
   &::after
@@ -90,6 +143,8 @@
     width: 40px
     height: 1px
     background-color: $close-button-color
+    @media (max-width: $mobile-width-only)
+      left: 5px
 
   &::before
     transform: rotate(45deg)
@@ -111,7 +166,7 @@
     display: none
 
   .main-nav--nojs .main-nav__list
-    display: flex
+    display: block
 
 
 
