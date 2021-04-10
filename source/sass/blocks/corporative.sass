@@ -20,20 +20,43 @@
       height: 1px
       width: 726px
 
+  @media (max-width: $mobile-width-only)
+    &:before
+      top: -30px
+      left: 0px
+      height: 1px
+      width: 288px
 
 .corporative__header
   @include footerHeaders()
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     text-align: center
+  @media (max-width: $mobile-width-only)
+    width: 288px
+    margin-left: 8px
+
 
 .corporative__text-info
   margin: 0px
-  @include fstyle(14px, 24px, rgba($dark-color, 0.5))
+  @include fstyle(14px, 23.8px, rgba($dark-color, 0.5))
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     text-align: center
+  @media (max-width: $mobile-width-only)
+    width: 288px
+    margin-left: 7px
+    text-align: center
+
+.corporative__text-breaker-desktop
+  display: none
+  @media (min-width: $desktop-width)
+    display: block
 
 .corporative__text-breaker
   display: none
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     display: block
 
+.corporative__text-breaker-mobile
+  display: none
+  @media (max-width: $mobile-width-only)
+    display: block

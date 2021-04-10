@@ -13,22 +13,52 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     &:before
-     height: 177px
+      height: 177px
 
-.tours__header
-  @include footerHeaders()
+  @media (max-width: $mobile-width-only)
+    &:before
+      top: 344px
+      left: 0px
+      height: 1px
+      width: 288px
 
-.tours__list
+
+
+.tours__wrapper
   display: grid
   grid-template-columns: 80px 74px 96px
-  gap: 10px 50px
-  margin: 0px
-  padding: 0px
-  list-style: none
+  column-gap: 50px
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     grid-template-columns: repeat(3, 95px)
     column-gap: 30px
+  @media (max-width: $mobile-width-only)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 288px
+    margin-bottom: 50px
+    column-gap: 0px
 
+.tours__header
+  @include footerHeaders()
+  @media (max-width: $mobile-width-only)
+    width: 249px
+    margin-left: 19px
+
+.tours__list
+  margin: 0px
+  padding: 0px
+  list-style: none
+  @media (max-width: $mobile-width-only)
+    width: 134px
+    &:first-child
+      margin-bottom: 20px
+      margin-right: 20px
 
 .tours__item
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0px
   @include fstyle(14px, 17px, rgba($dark-color, 0.5))
+  @media (max-width: $mobile-width-only)
+    text-align: center

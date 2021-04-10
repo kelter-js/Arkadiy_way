@@ -1,12 +1,16 @@
 .contacts
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
+  @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
     display: flex
     flex-direction: column
+  @media (max-width: $mobile-width-only)
+    margin-bottom: 50px
 
 .contacts__header
   @include footerHeaders()
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     margin-bottom: 22px
+  @media (max-width: $mobile-width-only)
+    margin-left: 19px
 
 .contacts__mail-link,
 .contacts__phone-link
@@ -19,6 +23,12 @@
   margin-top: 19px
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     @include fstyle(16px, 32px, $red)
+  @media (max-width: $mobile-width-only)
+    padding-left: 80px
+
+.contacts__mail-link
+  @media (max-width: $mobile-width-only)
+    padding-left: 142px
 
 .contacts__phone-icon,
 .contacts__mail-icon
@@ -32,12 +42,18 @@
   height: 30px
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     top: 87px
+  @media (max-width: $mobile-width-only)
+    top: 77px
+    left: 44px
 
 
 .contacts__mail-icon
   top: 50px
   width: 26px
   height: 20px
+  @media (max-width: $mobile-width-only)
+    top: 48px
+    left: 101px
 
 .contacts__full-mail
   @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
