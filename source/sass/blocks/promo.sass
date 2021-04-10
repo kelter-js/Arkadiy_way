@@ -1,0 +1,95 @@
+.promo
+  min-height: 860px
+  width: 1920px
+  margin: 0 auto
+  background-image: url(".././img/desktop-main-promo.jpg")
+  background-repeat: no-repeat
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    min-height: 344px
+    width: 768px
+    background-image: url(".././img/tablet-main-promo.jpg")
+  @media (max-width: $mobile-width-only)
+    min-height: 235px
+    width: 320px
+    background-image: url(".././img/mobile-main-promo.jpg")
+
+
+.promo__wrapper
+  padding-top: 185px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    padding-top: 60px
+  @media (max-width: $mobile-width-only)
+    padding-top: 81px
+
+.promo__header,
+.promo__text-info,
+  margin: 0px
+  padding-left: 700px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    padding-left: 164px
+  @media (max-width: $mobile-width-only)
+    padding-left: 5px
+
+.promo__header
+  margin-bottom: 30px
+  @include fstyle(55px, 80px, $white, 600)
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    margin-bottom: 15px
+    @include fstyle(30px, 45px, $white, 600)
+  @media (max-width: $mobile-width-only)
+    @include fstyle(24px, 36px, $white, 600)
+    text-align: center
+    margin-bottom: 102px
+
+.promo__text-info
+  width: 376px
+  margin-bottom: 39px
+  @include fstyle(16px, 27px, $white)
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    letter-spacing: -0.4px
+    text-align: center
+  @media (max-width: $mobile-width-only)
+    color: $very-dark-black
+    width: 288px
+    margin-bottom: 20px
+    text-align: center
+
+.promo__show-tour-button
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  margin-left: 700px
+  text-decoration: none
+  letter-spacing: 2px
+  @include fstyle(12px, 15px, $white, 700, uppercase)
+
+  &:before
+    content: ""
+    position: absolute
+    top: 30px
+    right: 40px
+    height: 16px
+    width: 16px
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1V15' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15 8L8 15L1 8' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    margin-left: 238px
+    @include fstyle(10px, 12px, $white, 500, uppercase)
+    &:before
+      top: 18px
+
+  @media (max-width: $mobile-width-only)
+    margin-left: 5px
+    @include fstyle(10px, 12px, $white, 500, uppercase)
+    &:before
+      top: 16px
+
+.promo__text-breaker-tablet
+  display: none
+  @media (min-width: $desktop-width)
+    display: block
+
+.promo__text-breaker-mobile
+  display: none
+  @media (max-width: $mobile-width-only)
+    display: block
