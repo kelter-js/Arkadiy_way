@@ -1,6 +1,22 @@
+.tours
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 0px
+    height: 189px
+    width: 1px
+    background-color: $light-grey
+
+  &:before
+    left: 400px
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
+    &:before
+     height: 177px
+
 .tours__header
-  margin: 0px
-  margin-bottom: 20px
+  @include footerHeaders()
 
 .tours__list
   display: grid
@@ -9,3 +25,10 @@
   margin: 0px
   padding: 0px
   list-style: none
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
+    grid-template-columns: repeat(3, 95px)
+    column-gap: 30px
+
+
+.tours__item
+  @include fstyle(14px, 17px, rgba($dark-color, 0.5))

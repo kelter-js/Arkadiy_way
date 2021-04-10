@@ -109,6 +109,9 @@
   @media (max-width: $mobile-width-only)
     width: 50px
 
+.main-nav--opened
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
+    min-height: 516px
 .main-nav--closed .main-nav__toggle:before
   content: ""
   position: absolute
@@ -142,7 +145,7 @@
     left: 15px
     width: 40px
     height: 1px
-    background-color: $close-button-color
+    background-color: rgba($dark-color, 0.2)
     @media (max-width: $mobile-width-only)
       left: 5px
 
@@ -156,7 +159,7 @@
 
   &:active::before,
   &:active::after
-    background-color: fade($close-button-color, 30%)
+    background-color: fade(rgba($dark-color, 0.2), 30%)
 
 @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
   .main-nav--closed .main-nav__list
