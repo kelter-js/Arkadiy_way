@@ -1,0 +1,109 @@
+.visit-places
+  margin-bottom: 97px
+
+.visit-places__header
+  position: relative
+  width: 358px
+  margin: 0px
+  margin-bottom: 64px
+  @include fstyle(55px, 80px, $very-dark-black, 600)
+  letter-spacing: -1.245px
+  &:before
+   content: ""
+   position: absolute
+   top: 190px
+   height: 4px
+   width: 228px
+   background-color: $red
+
+.visit-places__tour-annotation
+  width: 358px
+  margin: 0px
+  margin-bottom: 56px
+  @include fstyle(16px, 28px, rgba($very-dark-black, 0.7))
+  letter-spacing: 0.4px
+
+.visit-places__tours-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+.visit-places__tours-link
+  position: absolute
+  top: 177px
+  left: 42px
+  display: none
+  height: 45px
+  width: 239px
+  padding-top: 30px
+  padding-left: 25px
+  @include fstyle(14px, 17px, $white, 500, uppercase)
+  border: 1px solid $white
+  text-decoration: none
+  letter-spacing: 2px
+
+.visit-places__tours-item
+  position: relative
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  min-height: 430px
+  width: 350px
+  margin-right: 60px
+  &:last-child,
+  &:nth-child(3)
+    margin-right: 0px
+
+  &:last-child,
+  &:nth-child(4)
+    margin-top: 101px
+
+  &:before
+    position: absolute
+    top: 368px
+    left: 68px
+    display: inline
+    width: 215px
+    height: 46px
+    padding-top: 17px
+    @include fstyle(24px, 29px, $very-dark-black, 500)
+    letter-spacing: -0.4px
+    background-color: $white
+    vertical-align: middle
+    text-align: center
+
+  &:hover
+    box-shadow: inset 0 0 0 180px rgba(20, 21, 23, 0.6)
+    &:before
+     box-shadow: inset 0 0 0 32px rgba(20, 21, 23, 0.6)
+    .visit-places__tours-link
+      display: inline-block
+
+.visit-places__tours-item--greece
+  background-image: url(".././img/first-tour-desktop.jpg")
+  &:before
+    content: "Греция"
+
+
+.visit-places__tours-item--albania
+  background-image: url(".././img/second-tour-desktop.jpg")
+  &:before
+    content: "Албания"
+
+.visit-places__tours-item--macedonia
+  background-image: url(".././img/third-tour-desktop.jpg")
+  &:before
+    content: "Македония"
+
+.visit-places__tours-item--montenegro
+  background-image: url(".././img/fourth-tour-desktop.jpg")
+  &:before
+    content: "Черногория"
+
+.visit-places__tours-item--croatia
+  background-image: url(".././img/fifth-tour-desktop.jpg")
+  &:before
+    content: "Хорватия"
