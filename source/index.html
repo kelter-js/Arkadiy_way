@@ -97,9 +97,9 @@
             <p class="consulting__annotation">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
             <form class="consulting__form" method="post" action="X">
               <label class="visually-hidden" for="tel">Номер телефона</label>
-              <input class="consulting__phone-input" id="tel" type="tel" name="tel" pattern="[+]{1}[7]{1}[0-9]{10}" minlength="12" maxlength="12" required>
+              <input class="consulting__phone-input" id="tel" type="tel" name="tel" pattern="[0-9]{10}" placeholder="Введите 10 цифр номера" minlength="10" maxlength="10" required>
               <label class="visually-hidden" for="mail">Электронная почта</label>
-              <input class="consulting__mail-input" id="mail" type="email" name="email">
+              <input class="consulting__mail-input" id="mail" type="email" name="email" placeholder="E-mail">
               <input class="consulting__submit button" type="submit">
             </form>
           </div>
