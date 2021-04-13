@@ -1,0 +1,157 @@
+.prices
+  margin-bottom: 138px
+
+.prices__wrapper
+  display: flex
+
+.prices__pack
+  position: relative
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  width: 308px
+  min-height: 600px
+  padding-left: 30px
+  padding-right: 30px
+  padding-top: 40px
+  padding-bottom: 30px
+  border: 1px solid rgba($very-dark-black, 0.3)
+  border-radius: 5px
+  &:before
+    content: ""
+    position: absolute
+    top: 190px
+    left: 28px
+    width: 310px
+    height: 1px
+    background-color: rgba($very-dark-black, 0.3)
+
+.prices__header
+  margin: 0px
+
+.prices__price-amount
+  height: 34px
+  margin: 0px
+  @include fstyle(25px, 34px, rgba($dark-color, 0.7), 700)
+
+.prices__including-annotation
+  margin: 0px
+  margin-bottom: 59px
+  height: 48px
+  width: 289px
+  @include fstyle(16px, 24px, $very-dark-black)
+
+.prices__service-info
+  @include fstyle(16px, 32px, $very-dark-black)
+
+.prices__buy-tour-button
+  height: 75px
+  width: 310px
+  padding: 0px
+  @include fstyle(12px, 14.6px, $white, 700, uppercase)
+  letter-spacing: 2px
+  border: none
+
+.prices__about-wrapper
+  width: 303px
+  min-height: 460px
+  margin-top: 117px
+
+.prices__about-header
+  margin-bottom: 53px
+  line-height: 90px
+  &:before
+    top: 99px
+
+.prices__about-annotation
+  width: 299px
+  margin-bottom: 60px
+  @include fstyle(16px, 27.2px, rgba($very-dark-black, 0.7))
+
+.prices__contact-us
+  margin-left: 50px
+  @include fstyle(22px, 34px, $dark-color, 500)
+
+.prices__phone-number
+  position: relative
+  margin-left: 50px
+  text-decoration: none
+  @include fstyle(20px, 32px, $black)
+  &:before
+    content: ""
+    position: absolute
+    left: -50px
+    width: 30px
+    height: 30px
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.39635 8.62432C7.31179 7.42623 7.57753 6.24606 8.28114 5.29684C8.89115 4.43632 9.68536 3.96636 10.6426 3.69172C11.4489 3.4525 11.9774 3.74561 12.2099 4.64204C12.5421 5.98224 13.0162 7.3225 13.1884 8.73361C13.2427 9.35485 12.8411 10.2332 12.4062 10.6856C11.3161 11.7589 11.5426 12.5399 12.37 14.1643C12.6267 14.6881 13.0344 15.5934 13.8286 16.7919C14.656 17.9992 15.0939 18.6472 16.1569 18.0975C17.3376 17.5035 18.1983 17.8855 19.0891 18.8444C19.6931 19.5369 20.3574 20.1318 20.9614 20.8243C21.8341 21.8542 21.7949 22.5641 21.1124 23.2915C19.8833 24.6309 17.854 25.0736 16.3441 24.1766C15.5106 23.6881 14.6802 23.0487 14.0188 22.303C11.1047 18.9825 9.00291 15.1212 7.73759 10.7632C7.53526 10.0265 7.44165 9.28104 7.39635 8.62432Z' stroke='%23FE7865' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E%0A")
+
+.prices__pack--full
+  min-height: 596px
+  width: 304px
+  margin-right: 30px
+  border: 3px solid $red
+  &:before
+    left: 25px
+    background-color: $red
+
+.prices__pack--saving
+  margin-right: 111px
+
+.prices__header--full
+  height: 34px
+  width: 227px
+  @include fstyle(28px, 34px, $red, 600)
+
+.prices__header--saving
+  height: 38px
+  width: 237px
+  @include fstyle(28px, 38px, rgba($dark-color, 0.7), 600)
+  letter-spacing: -1.2px
+
+.prices__price-amount--full
+  width: 75px
+  color: $red
+
+.prices__service-list
+  margin: 0px
+  margin-left: 30px
+  margin-bottom: 43px
+  padding-left: 0px
+  list-style: none
+
+.prices__service-info
+  margin: 0px
+
+.prices__pack-header-wrapper
+  display: flex
+  width: 310px
+
+.prices__pack-header-wrapper--full-price
+  margin-bottom: 40px
+
+.prices__pack-header-wrapper--saving
+  margin-bottom: 36px
+
+
+.prices__service-item
+  position: relative
+  margin-bottom: 15px
+  &:last-child
+    margin-bottom: 0px
+  &:before
+    content: ""
+    position: absolute
+    top: 9px
+    left: -26px
+    height: 12px
+    width: 14px
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23FE7865'/%3E%3C/svg%3E%0A");
+
+.prices__service-item--full-price
+  &:before
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23141517'/%3E%3C/svg%3E%0A")
+
+.prices__service-list--full-price
+  min-height: 292px
+  margin-bottom: 54px
+
