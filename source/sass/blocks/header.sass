@@ -9,3 +9,8 @@
     height: 4px
     width: 228px
     background-color: $red
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    text-align: center
+    @include fstyle(30px, 45px, $very-dark-black, 600)
+    &:before
+      display: none
