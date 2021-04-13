@@ -2,10 +2,12 @@
   margin-bottom: 138px
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     margin-bottom: 125px
+  @media (max-width: $mobile-width-only)
+    margin-bottom: 50px
 
 .prices__wrapper
   display: flex
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     flex-wrap: wrap
 
 .prices__pack
@@ -29,9 +31,8 @@
     width: 310px
     height: 1px
     background-color: rgba($very-dark-black, 0.3)
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
-    position: relative
-    width: 248px
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
+    width: 246px
     padding-left: 20px
     padding-right: 20px
     padding-top: 27px
@@ -40,10 +41,12 @@
       top: 200px
       left: 20px
       width: 248px
+  @media (max-width: $mobile-width-only)
+    margin-left: 4px
 
 .prices__header
   margin: 0px
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     margin-bottom: 10px
     text-align: center
 
@@ -58,7 +61,7 @@
   height: 48px
   width: 289px
   @include fstyle(16px, 24px, $very-dark-black)
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     height: 71px
     width: 248px
     margin-bottom: 31px
@@ -75,16 +78,20 @@
   @include fstyle(12px, 14.6px, $white, 700, uppercase)
   letter-spacing: 2px
   border: none
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     position: absolute
     top: 578px
     left: -1px
     height: 50px
     width: 288px
+  @media (max-width: $mobile-width-only)
+    top: 578px
 
 .prices__buy-tour-button--full-price
   top: 576px
   left: -3px
+  @media (max-width: $mobile-width-only)
+    top: 564px
 
 .prices__about-wrapper
   width: 303px
@@ -98,7 +105,18 @@
     flex-grow: 1
     min-height: 255px
     width: 726px
+    margin-top: 0px
     margin-bottom: 30px
+  @media (max-width: $mobile-width-only)
+    display: flex
+    flex-direction: column
+    align-items: center
+    order: -1
+    min-height: 367px
+    width: 288px
+    margin-top: 0px
+    margin-left: 4px
+    margin-bottom: 40px
 
 .prices__about-header
   margin-bottom: 53px
@@ -106,8 +124,11 @@
   &:before
     top: 99px
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
-    line-height: 45px
     margin-bottom: 20px
+    line-height: 45px
+  @media (max-width: $mobile-width-only)
+    margin-bottom: 20px
+    line-height: 36px
 
 .prices__about-annotation
   width: 299px
@@ -118,13 +139,17 @@
     width: 726px
     margin-bottom: 30px
     text-align: center
+  @media (max-width: $mobile-width-only)
+    width: 288px
+    margin-bottom: 20px
+    text-align: center
 
 .prices__contact-us
   margin: 0px
   margin-bottom: 13px
   margin-left: 50px
   @include fstyle(22px, 34px, $dark-color, 500)
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     margin-left: 0px
     margin-bottom: 10px
     @include fstyle(18px, 34px, $dark-color, 500)
@@ -141,7 +166,7 @@
     width: 30px
     height: 30px
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.39635 8.62432C7.31179 7.42623 7.57753 6.24606 8.28114 5.29684C8.89115 4.43632 9.68536 3.96636 10.6426 3.69172C11.4489 3.4525 11.9774 3.74561 12.2099 4.64204C12.5421 5.98224 13.0162 7.3225 13.1884 8.73361C13.2427 9.35485 12.8411 10.2332 12.4062 10.6856C11.3161 11.7589 11.5426 12.5399 12.37 14.1643C12.6267 14.6881 13.0344 15.5934 13.8286 16.7919C14.656 17.9992 15.0939 18.6472 16.1569 18.0975C17.3376 17.5035 18.1983 17.8855 19.0891 18.8444C19.6931 19.5369 20.3574 20.1318 20.9614 20.8243C21.8341 21.8542 21.7949 22.5641 21.1124 23.2915C19.8833 24.6309 17.854 25.0736 16.3441 24.1766C15.5106 23.6881 14.6802 23.0487 14.0188 22.303C11.1047 18.9825 9.00291 15.1212 7.73759 10.7632C7.53526 10.0265 7.44165 9.28104 7.39635 8.62432Z' stroke='%23FE7865' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E%0A")
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     margin-left: 0px
     text-decoration: underline
     @include fstyle(18px, 32px, $red)
@@ -156,12 +181,18 @@
   &:before
     left: 25px
     background-color: $red
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     width: 242px
     margin-right: 50px
     margin-left: 50px
     &:before
       left: 17px
+  @media (max-width: $mobile-width-only)
+    min-height: 584px
+    margin-bottom: 30px
+    margin-left: 5px
+    margin-right: 0px
+
 
 .prices__pack--saving
   margin-right: 111px
@@ -199,7 +230,7 @@
 .prices__pack-header-wrapper
   display: flex
   width: 310px
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     flex-direction: column
     align-items: center
     width: 248px
@@ -212,7 +243,7 @@
 
 .prices__pack-header-wrapper--saving,
 .prices__pack-header-wrapper--full-price
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     margin-bottom: 11px
 
 .prices__service-item
@@ -228,7 +259,7 @@
     height: 12px
     width: 14px
     background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23FE7865'/%3E%3C/svg%3E%0A");
-  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+  @media (min-width: $mobile-width) and (max-width: $desktop-width)
     width: 218px
     margin-bottom: 10px
 
