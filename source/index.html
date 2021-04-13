@@ -68,25 +68,121 @@
           <p class="visit-places__tour-annotation">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
 
           <ul class="visit-places__tours-list">
-            <li class="visit-places__tours-item visit-places__tours-item--greece">
+            <li class="visit-places__tours-item visit-places__tours-item--greece" aria-label="Греция">
               <a class="visit-places__tours-link" href>смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--albania">
+            <li class="visit-places__tours-item visit-places__tours-item--albania" aria-label="Албания">
               <a class="visit-places__tours-link" href>смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--macedonia">
+            <li class="visit-places__tours-item visit-places__tours-item--macedonia" aria-label="Македония">
               <a class="visit-places__tours-link" href>смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--montenegro">
+            <li class="visit-places__tours-item visit-places__tours-item--montenegro" aria-label="Черногория">
               <a class="visit-places__tours-link" href>смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--croatia">
+            <li class="visit-places__tours-item visit-places__tours-item--croatia" aria-label="Хорватия">
               <a class="visit-places__tours-link" href>смотреть подробнее</a>
             </li>
           </ul>
 
         </div>
 
+      </section>
+
+      <section class="tour-countries container">
+        <h2 class="visually-hidden">Перечень стран для выбора тура</h2>
+          <ul class="tour-countries__choose-list">
+            <li class="tour-countries__item tour-countries__item--selected">Греция</li>
+            <li class="tour-countries__item">Албания</li>
+            <li class="tour-countries__item">Македония</li>
+            <li class="tour-countries__item">Черногория</li>
+            <li class="tour-countries__item">Хорватия</li>
+          </ul>
+
+          <section class="tour-countries__country-card tour-countries__country-card--enabled">
+            <div class="tour-countries__about-country-wrapper">
+              <h2 class="tour-countries__header header">Греция</h2>
+              <p class="tour-countries__about-country-annotation">
+                На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
+              </p>
+              <button class="tour-countries__buy-button button">купить тур сейчас</button>
+            </div>
+            <div class="tour-countries__review-wrapper">
+              <div class="tour-countries__review-card">
+                <h3 class="tour-countries__review-header header">Отзывы</h3>
+                <p class="tour-countries__review-text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!</p>
+                <p class="tour-countries__review-author">Влада Голицина</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="tour-countries__country-card">
+            <div class="tour-countries__about-country-wrapper">
+              <h2 class="tour-countries__header header">Албания</h2>
+              <p class="tour-countries__about-country-annotation tour-countries__about-country-annotation--albania">
+                В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
+              </p>
+              <button class="tour-countries__buy-button button">купить тур сейчас</button>
+            </div>
+            <div class="tour-countries__review-wrapper tour-countries__review-wrapper--albania">
+              <div class="tour-countries__review-card tour-countries__review-card--albania">
+                <h3 class="tour-countries__review-header header">Отзывы</h3>
+                <p class="tour-countries__review-text tour-countries__review-text--albania">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+                <p class="tour-countries__review-author tour-countries__review-author--albania">Маришка</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="tour-countries__country-card">
+            <div class="tour-countries__about-country-wrapper">
+              <h2 class="tour-countries__header header">Черногория</h2>
+              <p class="tour-countries__about-country-annotation tour-countries__about-country-annotation--montenegro">
+                Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+              </p>
+              <button class="tour-countries__buy-button button">купить тур сейчас</button>
+            </div>
+            <div class="tour-countries__review-wrapper tour-countries__review-wrapper--montenegro">
+              <div class="tour-countries__review-card tour-countries__review-card--montenegro">
+                <h3 class="tour-countries__review-header header">Отзывы</h3>
+                <p class="tour-countries__review-text tour-countries__review-text--montenegro">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
+                <p class="tour-countries__review-author tour-countries__review-author--montenegro">Анастасия Мей</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="tour-countries__country-card">
+            <div class="tour-countries__about-country-wrapper">
+              <h2 class="tour-countries__header header">Македония</h2>
+              <p class="tour-countries__about-country-annotation tour-countries__about-country-annotation--macedonia">
+                В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
+              </p>
+              <button class="tour-countries__buy-button button">купить тур сейчас</button>
+            </div>
+            <div class="tour-countries__review-wrapper tour-countries__review-wrapper--macedonia">
+              <div class="tour-countries__review-card tour-countries__review-card--macedonia">
+                <h3 class="tour-countries__review-header header">Отзывы</h3>
+                <p class="tour-countries__review-text tour-countries__review-text--macedonia">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
+                <p class="tour-countries__review-author tour-countries__review-author--macedonia">Михаил Кузьмин</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="tour-countries__country-card">
+            <div class="tour-countries__about-country-wrapper">
+              <h2 class="tour-countries__header header">Хорватия</h2>
+              <p class="tour-countries__about-country-annotation tour-countries__about-country-annotation--croatia">
+                В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
+              </p>
+              <button class="tour-countries__buy-button button">купить тур сейчас</button>
+            </div>
+            <div class="tour-countries__review-wrapper tour-countries__review-wrapper--croatia">
+              <div class="tour-countries__review-card tour-countries__review-card--croatia">
+                <h3 class="tour-countries__review-header header">Отзывы</h3>
+                <p class="tour-countries__review-text tour-countries__review-text--croatia">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
+                <p class="tour-countries__review-author tour-countries__review-author--croatia">Михаил Кузьмин</p>
+              </div>
+            </div>
+          </section>
       </section>
 
       <section class="prices">

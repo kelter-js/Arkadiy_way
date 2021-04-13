@@ -7,19 +7,21 @@
   width: 358px
   margin: 0px
   margin-bottom: 64px
+  line-height: 80px
   letter-spacing: -1.245px
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     width: 301px
     margin-left: 212px
     margin-bottom: 20px
+    line-height: 45px
 
   @media (max-width: $mobile-width-only)
     width: 288px
     margin-left: 5px
     margin-bottom: 20px
-    @include fstyle(24px, 36px, $very-dark-black, 600)
     text-align: center
+    line-height: 36px
     &:before
       display: none
 
