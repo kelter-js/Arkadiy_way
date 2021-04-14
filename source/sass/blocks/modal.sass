@@ -7,12 +7,28 @@
   display: none
   margin: auto
   background-color: $white
+
+.show-modal
+  display: block
+
+.show-modal--buy
+  display: flex
+
+.modal__close-modal
+  position: absolute
+  top: 25.5px
+  right: 14.7px
+  width: 30px
+  height: 30px
+  border: none
+  padding: 0px
+  background: none
   &:before,
   &:after
     content: ""
     position: absolute
-    top: 31.5px
-    right: 14.7px
+    top: 15px
+    left: -1px
     width: 32px
     height: 1px
     background-color: rgba($dark-color, 0.2)
@@ -24,9 +40,3 @@
 
   &:after
     transform: rotate(-45deg)
-
-.show-modal
-  display: block
-
-.show-modal--buy
-  display: flex
