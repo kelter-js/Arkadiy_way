@@ -1,0 +1,100 @@
+.modal-buy
+  display: flex
+  flex-wrap: wrap
+  height: 444px
+  width: 728px
+  @media (max-width: $mobile-width-only)
+    height: 468px
+    width: 304px
+    padding-top: 100px
+    padding-left: 16px
+
+.modal-buy__text
+  margin: 0px
+  margin-bottom: 50px
+  text-align: center
+  @include fstyle(25px, 42.5px, $darker-black-color, 600)
+
+.modal-buy__image
+  margin-right: 74px
+  @media (max-width: $mobile-width-only)
+    display: none
+
+.modal-buy__buy-wrapper
+  height: 283px
+  width: 270px
+  margin-top: 72px
+  @media (max-width: $mobile-width-only)
+    margin-top: 0px
+
+.modal-buy__form
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  width: 270px
+  &:before
+    content: "*"
+    position: absolute
+    top: 7px
+    left: 15px
+    display: inline-block
+    vertical-align: middle
+    @include fstyle(17px, 20.7px, $red, 700)
+
+  &:after
+    content: "+7"
+    position: absolute
+    top: 18px
+    left: 26px
+    display: inline-block
+    vertical-align: middle
+    @include fstyle(14px, 17px, $dark-color)
+
+  @media (max-width: $mobile-width-only)
+    width: 288px
+    margin-left: 0px
+    &:after
+      top: 16px
+
+.modal-buy__phone-input,
+.modal-buy__mail-input
+  padding-top: 17px
+  padding-bottom: 16px
+  padding-right: 15px
+  border: 1px solid rgba($very-dark-black, 0.3)
+  @include fstyle(14px, 17px, $dark-color)
+  &::placeholder
+    font-family: "Montserrat", "Arial", sans-serif
+    @include fstyle(14px, 17px, $dark-color)
+
+  @media (max-width: $mobile-width-only)
+    padding-top: 16px
+    padding-bottom: 15px
+
+.modal-buy__phone-input
+  width: 201px
+  padding-left: 51px
+  margin-bottom: 20px
+  @media (max-width: $mobile-width-only)
+    width: 222px
+    margin-right: 0px
+    margin-bottom: 20px
+
+.modal-buy__mail-input
+  width: 237px
+  padding-left: 15px
+  margin-bottom: 20px
+  @media (max-width: $mobile-width-only)
+    width: 258px
+
+.modal-buy__submit
+  padding: 0px
+  min-height: 50px
+  width: 176px
+  @include fstyle(12px, 14.6px, $white, 700, uppercase)
+  letter-spacing: 2px
+  border:  none
+  @media (max-width: $mobile-width-only)
+    min-height: 50px
+    width: 288px

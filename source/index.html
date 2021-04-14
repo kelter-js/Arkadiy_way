@@ -360,6 +360,26 @@
 
     </footer>
 
+    <section class="modal modal-success">
+      <h2 class="visually-hidden">Форма отправлена</h2>
+      <p class="modal-success__text">Форма успешно отправлена, спасибо! :)</p>
+    </section>
+
+    <section class="modal modal-buy show-modal--buy">
+      <h2 class="visually-hidden">Покупка тура</h2>
+      <img class="modal-buy__image" src="/img/modal.jpg" width="338" height="444" alt="Изображение скалистого берега и волнующегося моря">
+      <div class="modal-buy__buy-wrapper">
+        <p class="modal-buy__text">Купить тур</p>
+        <form class="modal-buy__form" method="post" action="X">
+          <label class="visually-hidden" for="tel">Номер телефона</label>
+          <input class="modal-buy__phone-input" id="tel" type="tel" name="tel" pattern="[0-9]{10}" placeholder="Введите 10 цифр номера" minlength="10" maxlength="10" required>
+          <label class="visually-hidden" for="mail">Электронная почта</label>
+          <input class="modal-buy__mail-input" id="mail" type="email" name="email" placeholder="E-mail">
+         <input class="modal-buy__submit button" type="submit">
+        </form>
+      </div>
+    </section>
+
     <script src="/js/main-script.js"></script>
   </body>
 </html>

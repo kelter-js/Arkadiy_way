@@ -1,0 +1,32 @@
+.modal
+  position: fixed
+  top: 0px
+  right: 0px
+  bottom: 0px
+  left: 0px
+  display: none
+  margin: auto
+  background-color: $white
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    top: 31.5px
+    right: 14.7px
+    width: 32px
+    height: 1px
+    background-color: rgba($dark-color, 0.2)
+    border-radius: 5px
+    cursor: pointer
+
+  &:before
+    transform: rotate(45deg)
+
+  &:after
+    transform: rotate(-45deg)
+
+.show-modal
+  display: block
+
+.show-modal--buy
+  display: flex
