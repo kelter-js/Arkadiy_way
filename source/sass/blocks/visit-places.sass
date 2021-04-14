@@ -129,37 +129,53 @@
   background-image: url(".././img/first-tour-desktop.jpg")
   &:before
     content: "Греция"
+  @media (min-resolution: 2dppx)
+    background-image: url(".././img/first-tour-desktop@2x.jpg")
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     background-image: url(".././img/first-tour-tablet.jpg")
     margin-right: 30px
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) and (min-resolution: 2dppx)
+    background-image: url(".././img/first-tour-tablet@2x.jpg")
 
 
 .visit-places__tours-item--albania
   background-image: url(".././img/second-tour-desktop.jpg")
   &:before
     content: "Албания"
+  @media (min-resolution: 2dppx)
+    background-image: url(".././img/second-tour-desktop@2x.jpg")
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     background-image: url(".././img/second-tour-tablet.jpg")
     margin-right: 0px
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) and (min-resolution: 2dppx)
+    background-image: url(".././img/second-tour-tablet@2x.jpg")
 
 .visit-places__tours-item--macedonia
   background-image: url(".././img/third-tour-desktop.jpg")
   margin-right: 0px
   &:before
     content: "Македония"
+  @media (min-resolution: 2dppx)
+    background-image: url(".././img/third-tour-desktop@2x.jpg")
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     background-image: url(".././img/third-tour-tablet.jpg")
     margin-right: 30px
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) and (min-resolution: 2dppx)
+    background-image: url(".././img/third-tour-tablet@2x.jpg")
 
 .visit-places__tours-item--montenegro
   background-image: url(".././img/fourth-tour-desktop.jpg")
   margin-top: 101px
   &:before
     content: "Черногория"
+  @media (min-resolution: 2dppx)
+    background-image: url(".././img/fourth-tour-desktop@2x.jpg")
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     background-image: url(".././img/fourth-tour-tablet.jpg")
     margin-right: 0px
     margin-top: 0px
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) and (min-resolution: 2dppx)
+    background-image: url(".././img/fourth-tour-tablet@2x.jpg")
   @media (max-width: $mobile-width-only)
     margin-top: 0px
 
@@ -169,9 +185,13 @@
   margin-right: 0px
   &:before
     content: "Хорватия"
+  @media (min-resolution: 2dppx)
+    background-image: url(".././img/fifth-tour-desktop@2x.jpg")
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only)
     background-image: url(".././img/fifth-tour-tablet.jpg")
     margin-top: 0px
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) and (min-resolution: 2dppx)
+    background-image: url(".././img/fifth-tour-tablet@2x.jpg")
   @media (max-width: $mobile-width-only)
     margin-top: 0px
 

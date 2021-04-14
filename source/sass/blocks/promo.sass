@@ -5,16 +5,22 @@
   margin-bottom: 199px
   background-image: url(".././img/desktop-main-promo.jpg")
   background-repeat: no-repeat
+  @media (min-resolution: 2dppx)
+    background-image: url(".././img/desktop-main-promo@2x.jpg")
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     min-height: 344px
     width: 768px
     margin-bottom: 80px
     background-image: url(".././img/tablet-main-promo.jpg")
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) and (min-resolution: 2dppx)
+    background-image: url(".././img/tablet-main-promo@2x.jpg")
   @media (max-width: $mobile-width-only)
     min-height: 235px
     width: 320px
     margin-bottom: 108px
     background-image: url(".././img/mobile-main-promo.jpg")
+  @media (max-width: $mobile-width-only) and (min-resolution: 2dppx)
+      background-image: url(".././img/mobile-main-promo@2x.jpg")
 
 
 .promo__wrapper
