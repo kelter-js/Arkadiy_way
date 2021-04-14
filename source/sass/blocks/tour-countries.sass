@@ -12,18 +12,40 @@
     margin-bottom: 112px
   @media (max-width: $mobile-width-only)
     margin-bottom: 111px
+    &:before
+      width: 305px
+
+.tour-countries__list-wrapper
+  width: 902px
+  @media (min-width: $tablet-width) and (max-width: $desktop-width)
+    width: 727px
+    overflow: hidden
+  @media (max-width: $mobile-width-only)
+    width: 265px
+    overflow: hidden
 
 .tour-countries__choose-list
+  position: relative
   display: flex
   min-height: 39px
   margin: 0px
   padding: 0px
+  margin-left: 0px
   margin-bottom: 95px
   list-style: none
+  transition: margin-left 1s
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     margin-bottom: 48px
+    &:before
+      content: ""
+      position: absolute
+      top: 0px
+      left: -150px
+      width: 150px
+      height: 39px
+      background-color: $white
+      z-index: 1
   @media (min-width: $mobile-width) and (max-width: $desktop-width)
-    overflow: hidden
     margin-bottom: 39px
 
 .tour-countries__item
