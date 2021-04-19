@@ -59,19 +59,49 @@
           <h2 class="visit-places__header header">Места посещения</h2>
           <p class="visit-places__tour-annotation">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
           <ul class="visit-places__tours-list">
-            <li class="visit-places__tours-item visit-places__tours-item--greece" aria-label="Греция">
+            <li class="visit-places__tours-item visit-places__tours-item--greece">
+              <picture>
+                <source type="image/webp" media="(max-width: 1929px)" srcset="img/first-tour-tablet.webp 1x, img/first-tour-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/first-tour-desktop.webp 1x, img/first-tour-desktop@2x.webp 2x">
+                <source media="(max-width: 1929px)" srcset="img/first-tour-tablet.jpg 1x, img/first-tour-tablet@2x.jpg 2x">
+                <img class="visit-places__tour-image" src="img/first-tour-desktop.jpg" srcset="img/first-tour-desktop@2x.jpg 2x" alt="Комплекс монастырей в Греции">
+              </picture>
               <a class="visit-places__tours-link visit-places__tours-link--greece" href="#tour-contries">смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--albania" aria-label="Албания">
+            <li class="visit-places__tours-item visit-places__tours-item--albania">
+              <picture>
+                <source type="image/webp" media="(max-width: 1929px)" srcset="img/second-tour-tablet.webp 1x, img/second-tour-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/second-tour-desktop.webp 1x, img/second-tour-desktop@2x.webp 2x">
+                <source media="(max-width: 1929px)" srcset="img/second-tour-tablet.jpg 1x, img/second-tour-tablet@2x.jpg 2x">
+                <img class="visit-places__tour-image" src="img/second-tour-desktop.jpg" srcset="img/second-tour-desktop@2x.jpg 2x" alt="Албания. Вид на курорт Ксамиль">
+              </picture>
               <a class="visit-places__tours-link visit-places__tours-link--albania" href="#tour-contries">смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--macedonia" aria-label="Македония">
+            <li class="visit-places__tours-item visit-places__tours-item--macedonia">
+              <picture>
+                <source type="image/webp" media="(max-width: 1929px)" srcset="img/third-tour-tablet.webp 1x, img/third-tour-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/third-tour-desktop.webp 1x, img/third-tour-desktop@2x.webp 2x">
+                <source media="(max-width: 1929px)" srcset="img/third-tour-tablet.jpg 1x, img/third-tour-tablet@2x.jpg 2x">
+                <img class="visit-places__tour-image" src="img/third-tour-desktop.jpg" srcset="img/third-tour-desktop@2x.jpg 2x" alt="Македония. Палаошник, а за ним виднеется Орхидское озеро">
+              </picture>
               <a class="visit-places__tours-link visit-places__tours-link--macedonia" href="#tour-contries">смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--montenegro" aria-label="Черногория">
+            <li class="visit-places__tours-item visit-places__tours-item--montenegro">
+              <picture>
+                <source type="image/webp" media="(max-width: 1929px)" srcset="img/fourth-tour-tablet.webp 1x, img/fourth-tour-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/fourth-tour-desktop.webp 1x, img/fourth-tour-desktop@2x.webp 2x">
+                <source media="(max-width: 1929px)" srcset="img/fourth-tour-tablet.jpg 1x, img/fourth-tour-tablet@2x.jpg 2x">
+                <img class="visit-places__tour-image" src="img/fourth-tour-desktop.jpg" srcset="img/fourth-tour-desktop@2x.jpg 2x" alt="Каньон реки Тара в Черногории">
+              </picture>
               <a class="visit-places__tours-link visit-places__tours-link--montenegro" href="#tour-contries">смотреть подробнее</a>
             </li>
-            <li class="visit-places__tours-item visit-places__tours-item--croatia" aria-label="Хорватия">
+            <li class="visit-places__tours-item visit-places__tours-item--croatia">
+              <picture>
+                <source type="image/webp" media="(max-width: 1929px)" srcset="img/fifth-tour-tablet.webp 1x, img/fifth-tour-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/fifth-tour-desktop.webp 1x, img/fifth-tour-desktop@2x.webp 2x">
+                <source media="(max-width: 1929px)" srcset="img/fifth-tour-tablet.jpg 1x, img/fifth-tour-tablet@2x.jpg 2x">
+                <img class="visit-places__tour-image" src="img/fifth-tour-desktop.jpg" srcset="img/fifth-tour-desktop@2x.jpg 2x" alt="Пещера Бередине в Хорватии">
+              </picture>
               <a class="visit-places__tours-link visit-places__tours-link--croatia" href="#tour-contries">смотреть подробнее</a>
             </li>
           </ul>
@@ -336,7 +366,7 @@
     </section>
     <section class="modal modal-buy">
       <h2 class="visually-hidden">Покупка тура</h2>
-      <img class="modal-buy__image" src="/img/modal.jpg" width="338" height="444" alt="Изображение скалистого берега и волнующегося моря">
+      <img class="modal-buy__image" src="img/modal.jpg" width="338" height="444" alt="Изображение скалистого берега и волнующегося моря">
       <div class="modal-buy__buy-wrapper">
         <p class="modal-buy__text">Купить тур</p>
         <form class="modal-buy__form" method="post" action="X">
@@ -349,6 +379,6 @@
       </div>
       <button type="button" class="modal__close-modal" aria-label="Закрыть карту"></button>
     </section>
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
