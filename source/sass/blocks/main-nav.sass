@@ -56,6 +56,11 @@
 .main-nav__link
   @include fstyle(14px, 17px, $dark-color, 500)
   text-decoration: none
+
+  &:hover,
+  &:focus
+    color: $orange
+
   @media (max-width: $mobile-width-only)
     @include fstyle(20px, 28px, $darker-black-color, 600)
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
@@ -64,6 +69,13 @@
 .main-nav__phone
   margin-left: 89px
   @include fstyle(18px, 32px, $dark-color)
+
+  &:hover,
+  &:focus
+    color: $orange
+    & + .main-header__phone-icon
+      color: $orange
+
   @media (min-width: $mobile-width) and (max-width: $desktop-width)
     display: none
 
@@ -92,6 +104,7 @@
   position: absolute
   top: 2px
   left: 245px
+
   @media (min-width: $mobile-width) and (max-width: $desktop-width)
     display: none
 

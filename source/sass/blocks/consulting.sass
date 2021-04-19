@@ -76,6 +76,7 @@
     display: inline-block
     vertical-align: middle
     @include fstyle(17px, 20.7px, $red, 700)
+    z-index: 1
 
   &:after
     content: "+7"
@@ -92,8 +93,16 @@
     &:after
       top: 16px
 
+.consulting__error-message
+  position: absolute
+  display: none
+  height: 16px
+  width: 250px
+  @include fstyle(12px, 14.6px, $red)
+
 .consulting__phone-input,
 .consulting__mail-input
+  position: relative
   padding-top: 17px
   padding-bottom: 16px
   padding-right: 15px
@@ -103,6 +112,10 @@
     font-family: "Montserrat", "Arial", sans-serif
     @include fstyle(14px, 17px, $dark-color)
 
+  &:focus:invalid
+    outline: none
+    border-color: $red
+
   @media (max-width: $mobile-width-only)
     padding-top: 16px
     padding-bottom: 15px
@@ -111,6 +124,13 @@
   width: 201px
   margin-right: 19px
   padding-left: 51px
+
+  &:focus:invalid
+    & + .consulting__error-message
+      top: -16px
+      left: 0px
+      display: block
+
   @media (max-width: $mobile-width-only)
     width: 222px
     margin-right: 0px
@@ -119,9 +139,21 @@
 .consulting__mail-input
   width: 237px
   padding-left: 15px
+
+  &:focus:invalid
+    & + .consulting__error-message
+      top: -16px
+      left: 290px
+      display: block
+
   @media (max-width: $mobile-width-only)
     width: 258px
     margin-bottom: 20px
+    &:focus:invalid
+      & + .consulting__error-message
+        top: 55px
+        left: 0px
+        display: block
 
 .consulting__submit
   margin-top: 25px
@@ -140,4 +172,3 @@
   @media (max-width: $mobile-width-only)
     margin-top: 0px
     padding: 19px 98px
-

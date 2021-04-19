@@ -36,10 +36,10 @@
               </li>
             </ul>
           </nav>
+          <a class="main-nav__phone" href="tel:+749978468446">+7(499)-784-684-46</a>
           <svg class="main-header__phone-icon" width="30" height="30" fill="none" role="img" aria-hidden="true">
             <use xlink:href="/img/phone-icon.svg#phone-icon"/>
           </svg>
-          <a class="main-nav__phone" href="tel:+749978468446">+7(499)-784-684-46</a>
         </div>
       </div>
     </header>
@@ -312,8 +312,10 @@
             <form class="consulting__form" method="post" action="X">
               <label class="visually-hidden" for="tel">Номер телефона</label>
               <input class="consulting__phone-input" id="tel" type="tel" name="tel" pattern="[0-9]{10}" placeholder="Введите 10 цифр номера" minlength="10" maxlength="10" required>
+              <span class="consulting__error-message">Данные не верны</span>
               <label class="visually-hidden" for="mail">Электронная почта</label>
               <input class="consulting__mail-input" id="mail" type="email" name="email" placeholder="E-mail">
+              <span class="consulting__error-message">Данные не верны</span>
               <input class="consulting__submit button" type="submit">
             </form>
           </div>
