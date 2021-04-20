@@ -1,9 +1,9 @@
 const TOUR_LINK_ELEMENTS = [
-  document.querySelector('.visit-places__tours-link--greece'),
-  document.querySelector('.visit-places__tours-link--albania'),
-  document.querySelector('.visit-places__tours-link--macedonia'),
-  document.querySelector('.visit-places__tours-link--montenegro'),
-  document.querySelector('.visit-places__tours-link--croatia')
+  document.querySelector('.visit-places__tours-item--greece'),
+  document.querySelector('.visit-places__tours-item--albania'),
+  document.querySelector('.visit-places__tours-item--macedonia'),
+  document.querySelector('.visit-places__tours-item--montenegro'),
+  document.querySelector('.visit-places__tours-item--croatia')
 ];
 
 const CARDS_PARENT_SECTION = document.querySelector('.tour-countries');
@@ -33,8 +33,9 @@ const enableElement = (index, className, elements) => {
 
 document.addEventListener('click', (evt) => {
   const target = evt.target;
-  if (!TOUR_LINK_ELEMENTS.includes(target)) return;
-  const index = TOUR_LINK_ELEMENTS.indexOf(target);
+  if (!TOUR_LINK_ELEMENTS.map((link) => link.contains(target)).includes(true)) return;
+  const index = TOUR_LINK_ELEMENTS.map((link) => link.contains(target)).indexOf(true);
+  console.log(index)
   enableElement(index, ENABLE_CARD_CLASS, COUNTRY_TABS);
   enableElement(index, ENABLE_NAVIGATION_ITEM_CLASS, NAVIGATION_TAB_ELEMENTS);
 })

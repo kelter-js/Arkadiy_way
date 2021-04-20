@@ -125,15 +125,18 @@
       margin-bottom: 0px
 
     &:before
-      top: 365px
+      top: 369px
       left: 35px
       width: 215px
       height: 44px
       padding-top: 16px
 
     &:after
-      height: 425px
-      width: 288px
+      display: none
+
+    &:hover
+      .visit-places__tours-link
+        display: none
 
   @media (max-width: $mobile-width-only)
     margin-right: 0px
@@ -177,3 +180,9 @@
   @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
     margin-top: 0px
 
+.test
+  @media (min-width: $mobile-width) and (max-width: $tablet-width-only)
+    display: block
+    height: 425px
+    width: 288px
+    background-color: transparent

@@ -1,7 +1,4 @@
-import {
-  BUY_BUTTONS,
-  MODAL_ELEMENT_BUY
-} from './modal-buy.js';
+import {BUY_BUTTONS} from './modal-buy.js';
 
 const CLOSE_BUTTONS = [...document.querySelectorAll('.modal__close-modal')];
 const SHOW_MODAL_CLASS = 'show-modal';
