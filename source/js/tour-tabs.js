@@ -35,7 +35,6 @@ document.addEventListener('click', (evt) => {
   const target = evt.target;
   if (!TOUR_LINK_ELEMENTS.map((link) => link.contains(target)).includes(true)) return;
   const index = TOUR_LINK_ELEMENTS.map((link) => link.contains(target)).indexOf(true);
-  console.log(index)
   enableElement(index, ENABLE_CARD_CLASS, COUNTRY_TABS);
   enableElement(index, ENABLE_NAVIGATION_ITEM_CLASS, NAVIGATION_TAB_ELEMENTS);
 })
