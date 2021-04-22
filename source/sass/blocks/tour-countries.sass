@@ -8,12 +8,27 @@
     height: 1px
     width: 899px
     background-color: rgba($very-dark-black, 0.3)
+
+  &:after
+    content: ""
+    position: absolute
+    top: 134px
+    left: 238px
+    height: 1089px
+    width: 1444px
+    background-image: url(".././img/world-map-background.png")
+    z-index: -1
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width)
     margin-bottom: 112px
+    &:after
+      display: none
   @media (max-width: $mobile-width-only)
     margin-bottom: 111px
     &:before
       width: 305px
+    &:after
+      display: none
 
 .tour-countries__list-wrapper
   width: 902px

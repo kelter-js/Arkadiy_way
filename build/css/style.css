@@ -1531,14 +1531,27 @@
     height: 1px;
     width: 899px;
     background-color: rgba(44, 46, 63, 0.3); }
+  .tour-countries:after {
+    content: "";
+    position: absolute;
+    top: 134px;
+    left: 238px;
+    height: 1089px;
+    width: 1444px;
+    background-image: url(".././img/world-map-background.png");
+    z-index: -1; }
   @media (min-width: 768px) and (max-width: 1930px) {
     .tour-countries {
-      margin-bottom: 112px; } }
+      margin-bottom: 112px; }
+      .tour-countries:after {
+        display: none; } }
   @media (max-width: 767px) {
     .tour-countries {
       margin-bottom: 111px; }
       .tour-countries:before {
-        width: 305px; } }
+        width: 305px; }
+      .tour-countries:after {
+        display: none; } }
 
 .tour-countries__list-wrapper {
   width: 902px; }
