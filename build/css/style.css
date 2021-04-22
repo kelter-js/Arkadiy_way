@@ -1313,7 +1313,8 @@
       margin-bottom: 80px; } }
   @media (max-width: 767px) {
     .consulting {
-      margin-bottom: 70px; } }
+      margin-bottom: 70px;
+      background-color: #FBF8F8; } }
 
 .consulting__wrapper {
   position: relative;
@@ -1350,7 +1351,8 @@
       left: 0px;
       width: 288px;
       min-height: 391px;
-      margin-left: 5px; } }
+      margin-left: 5px;
+      background-color: #FBF8F8; } }
 
 .consulting__questions-header {
   width: 350px;
