@@ -1,44 +1,60 @@
+import {debouncer} from './debouncer.js'
+
 const TAB_NAVIGATION_ELEMENT = document.querySelector('.tour-countries__choose-list');
 let startCoordinateX;
-const UNIT = 'px';
-const ELEMENT_SIZES = 172;
-TAB_NAVIGATION_ELEMENT.style.marginLeft = 0 + UNIT;
-const NAVIGATION_WRAPPER = document.querySelector('.tour-countries__list-wrapper');
-const MOBILE_BREAKPOINT = -634;
-const TABLET_BREAKPOINT = -171;
-const MOBILE_WIDTH_CONTAINER = 265;
-const TABLET_WIDTH_CONTAINER = 727;
 
-TAB_NAVIGATION_ELEMENT.addEventListener('touchstart', (evt) => {
+const UNIT = 'px';
+const MOVE_DELAY = 500;
+
+const NAVIGATION_WRAPPER = document.querySelector('.tour-countries__list-wrapper');
+const MOBILE_WIDTH_CONTAINER = 265;
+
+const MOBILE_MARGIN_SWAPS = [
+  '0px',
+  '-172px',
+  '-361px',
+  '-578px',
+  '-632px'
+];
+
+TAB_NAVIGATION_ELEMENT.style.marginLeft = 0 + UNIT;
+
+const onTouchStart = (evt) => {
   startCoordinateX = evt.touches[0].clientX;
-})
-TAB_NAVIGATION_ELEMENT.addEventListener('touchmove', (evt) => {
+}
+
+const onTouchMove = (evt) => {
   if (!startCoordinateX) return;
   const currentCoordinates = evt.touches[0].clientX;
   const difference = currentCoordinates - startCoordinateX;
-  let newCoordinates = parseInt(TAB_NAVIGATION_ELEMENT.style.marginLeft, 10);
 
   if (difference < 0) {
-    newCoordinates -= ELEMENT_SIZES;
     if(NAVIGATION_WRAPPER.offsetWidth === MOBILE_WIDTH_CONTAINER) {
-      if(newCoordinates < MOBILE_BREAKPOINT) {
-        TAB_NAVIGATION_ELEMENT.style.marginLeft = MOBILE_BREAKPOINT + UNIT;
+      if(!(MOBILE_MARGIN_SWAPS.indexOf(TAB_NAVIGATION_ELEMENT.style.marginLeft) + 1 > 4)) {
+        TAB_NAVIGATION_ELEMENT.style.marginLeft = MOBILE_MARGIN_SWAPS[MOBILE_MARGIN_SWAPS.indexOf(TAB_NAVIGATION_ELEMENT.style.marginLeft) + 1]
         return;
       }
+      return;
     }
-    if(NAVIGATION_WRAPPER.offsetWidth === TABLET_WIDTH_CONTAINER) {
-      if(newCoordinates < TABLET_BREAKPOINT) {
-        TAB_NAVIGATION_ELEMENT.style.marginLeft = TABLET_BREAKPOINT + UNIT;
-        return;
-      }
-    }
+    TAB_NAVIGATION_ELEMENT.style.marginLeft = MOBILE_MARGIN_SWAPS[1];
   } else {
     if (getComputedStyle(TAB_NAVIGATION_ELEMENT).marginLeft === '0px') return;
-    newCoordinates += ELEMENT_SIZES;
-    if(newCoordinates > 0) newCoordinates = 0;
+    if(NAVIGATION_WRAPPER.offsetWidth === MOBILE_WIDTH_CONTAINER) {
+      if(!(MOBILE_MARGIN_SWAPS.indexOf(TAB_NAVIGATION_ELEMENT.style.marginLeft) - 1 < 0)) {
+        TAB_NAVIGATION_ELEMENT.style.marginLeft = MOBILE_MARGIN_SWAPS[MOBILE_MARGIN_SWAPS.indexOf(TAB_NAVIGATION_ELEMENT.style.marginLeft) - 1]
+        return;
+      }
+      return;
+    }
+    TAB_NAVIGATION_ELEMENT.style.marginLeft = 0 + UNIT;
   }
-  TAB_NAVIGATION_ELEMENT.style.marginLeft = newCoordinates + UNIT;
   startCoordinateX = null;
-})
+}
+
+const debouncedTouchMoveHandler = debouncer(onTouchMove, MOVE_DELAY);
+
+TAB_NAVIGATION_ELEMENT.addEventListener('touchstart', onTouchStart);
+
+TAB_NAVIGATION_ELEMENT.addEventListener('touchmove', debouncedTouchMoveHandler)
 
 
